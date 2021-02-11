@@ -12,6 +12,7 @@ import { PublicAssoComponent } from './@views/public-asso/public-asso.component'
 import { AdminPartnerComponent } from './@views/admin-partner/admin-partner.component';
 import { RouterModule, Routes } from '@angular/router';
 
+import { MaterialModule } from './material/material.module';
 
 const appRoutes: Routes = [
   { path: '', component: HomepageComponent },
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
