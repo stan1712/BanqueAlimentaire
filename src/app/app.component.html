@@ -1,16 +1,7 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <h1>Banque Alimentaire</h1>
-    <span class="menu-spacer"></span>
-    <div>
-      <a mat-button [routerLink]="'/'"> Accueil </a>
-      <a mat-button [routerLink]="'/admin'"> Partenaire </a>
-      <a mat-button [routerLink]="'/login'"> Connexion </a>
-      <a mat-button [routerLink]="'/profile'"> Profil </a>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+<app-navbar></app-navbar>
 
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+
+<app-footer></app-footer>
