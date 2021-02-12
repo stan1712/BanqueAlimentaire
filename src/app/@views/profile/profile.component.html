@@ -1,1 +1,34 @@
 <p>profile works!</p>
+<!-- premiere partie-->
+<mat-card>Mon Profil!</mat-card>
+<mat-grid-list cols="2" rowHeight="40em">
+  <mat-grid-tile colspan="1" rowspan="1">
+    <p>Coucou</p>
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="1" rowspan="1">
+    <mat-form-field appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>choisi</mat-label>
+      <mat-select>
+        <mat-option value="one">Bénévole</mat-option>
+        <mat-option value="two">Bénéficiaire</mat-option>
+      </mat-select>
+    </mat-form-field><br>
+    <mat-form-field appearance="fill">
+      <mat-label>Biographie</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field><br>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Homme</mat-radio-button>
+      <mat-radio-button value="2">Femme</mat-radio-button>
+      <mat-radio-button value="2">Non binaire</mat-radio-button>
+    </mat-radio-group>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+  
