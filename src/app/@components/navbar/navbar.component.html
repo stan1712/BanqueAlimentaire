@@ -1,12 +1,21 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <h1>Banque Alimentaire</h1>
-    <span class="menu-spacer"></span>
-    <div>
-      <a mat-button [routerLink]="'/'"> Accueil </a>
-      <a mat-button [routerLink]="'/admin'"> Partenaire </a>
-      <a mat-button [routerLink]="'/login'"> Connexion </a>
-      <a mat-button [routerLink]="'/profile'"> Profil </a>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark primary-color">
+    <mdb-navbar-brand><a class="navbar-brand" [routerLink]="'/'">Banque Alimentaire</a></mdb-navbar-brand>
+    
+    <links>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link waves-light" mdbWavesEffect [routerLink]="'/'">Accueil<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect [routerLink]="'/admin'">Partenaire</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect [routerLink]="'/login'">Connexion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link waves-light" mdbWavesEffect [routerLink]="'/profile'">Profil</a>
+            </li>
+
+        </ul>
+    </links>
+</mdb-navbar>
