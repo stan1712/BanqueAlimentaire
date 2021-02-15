@@ -1,1 +1,23 @@
 <p>homepage works!</p>
+<mat-grid-list  cols = "2"  rowHeight = "2: 2"> 
+  <mat-grid-tile>
+    <mat-card> 
+      <mat-card-title>Trouve une asso près de chez toi</mat-card-title><br>
+      <mat-form-field appearance="legacy" style="width: 45%;">
+        <mat-label>Rue</mat-label>
+        <input matInput placeholder="55 Avenue de la Libération">
+      </mat-form-field>
+      <mat-form-field appearance="legacy" style="width: 45%; padding-left: 9%;">
+        <mat-label>Ville</mat-label>
+        <input matInput placeholder="Ambarès et Lagrave">
+      </mat-form-field>
+      <section > 
+        <div  class = "example-button-row"> 
+          <button mat-raised-button color="warn">Recherche</button>
+        </div> 
+      </section> 
+      <mat-divider> </mat-divider>
+    </mat-card>
+  </mat-grid-tile> 
+  <mat-grid-tile> OKEY DOKEY YOOO! </mat-grid-tile> 
+</mat-grid-list>
