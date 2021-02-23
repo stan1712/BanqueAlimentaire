@@ -1,1 +1,43 @@
-<p>signup works!</p>
+<div class="row justify-content-center">
+	<div class="col-5">
+
+			<h1 class="align-center" >Inscription</h1>
+
+            <div class="md-form">
+				<input type="text" mdbInput id="name" class="form-control" />
+				<label class="form-label" for="name">Nom</label>
+			</div>
+            
+            <div class="md-form">
+				<input type="text" mdbInput id="firstname" class="form-control" />
+				<label class="form-label" for="firstname">Prenom</label>
+			</div>
+            
+            <div class="md-form">
+				<input type="text" mdbInput id="birthdate" class="form-control" />
+				<label class="form-label" for="birthdate">Date de naissance</label>
+			</div>
+
+			<div class="md-form">
+				<input type="email" mdbInput id="email" class="form-control" />
+				<label class="form-label" for="email">Adresse mail</label>
+			</div>
+
+			<div class="md-form">
+				<input type="password" mdbInput id="password" class="form-control" />
+				<label class="form-label" for="password">Mot de passe</label>
+			</div>
+
+            <div class="md-form">
+				<input type="password" mdbInput id="confpassword" class="form-control" />
+				<label class="form-label" for="confpassword">confirmation Mot de passe</label>
+			</div>
+
+			<div class="align-center">
+          		<button mdbBtn type="button" color="primary" mdbWavesEffect >Inscrption</button>
+        	</div>
+			<div class="align-right" >
+				<a [routerLink]="'/login'">J'ai déjà un compte</a>
+			</div>
+	</div>
+  </div>
