@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { RouterModule, Routes } from '@angular/router';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NavbarComponent } from './@components/navbar/navbar.component';
 import { FooterComponent } from './@components/footer/footer.component';
 import { HomepageComponent } from './@views/homepage/homepage.component';
@@ -10,9 +14,7 @@ import { ProfileComponent } from './@views/profile/profile.component';
 import { LoginComponent } from './@views/login/login.component';
 import { PublicAssoComponent } from './@views/public-asso/public-asso.component';
 import { AdminPartnerComponent } from './@views/admin-partner/admin-partner.component';
-import { RouterModule, Routes } from '@angular/router';
-
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { DashboardComponent } from './@views/dashboard/dashboard.component';
 
 const appRoutes: Routes = [
 	{ path: '', component: HomepageComponent },
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
 		ProfileComponent,
 		LoginComponent,
 		PublicAssoComponent,
-		AdminPartnerComponent
+		AdminPartnerComponent,
+		DashboardComponent
 	],
 	imports: [
 		BrowserModule,
