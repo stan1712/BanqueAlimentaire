@@ -2,23 +2,23 @@
 <div class="row justify-content-center">
 	<div class="col-5">
 
-			<h1 class="align-center" >connexion</h1>
+			<h1 class="align-center" >Connexion</h1>
 
-			<div class="form-outline">
-				<input type="email" id="typeEmail" class="form-control" />
-				<label class="form-label" for="typeEmail">Email input</label>
+			<div class="md-form">
+				<input type="email" mdbInput id="email" class="form-control" />
+				<label class="form-label" for="email">Adresse mail</label>
 			</div>
 
-			<div class="form-outline">
-				<input type="password" id="typePassword" class="form-control" />
-				<label class="form-label" for="typePassword">Password input</label>
+			<div class="md-form">
+				<input type="password" mdbInput id="password" class="form-control" />
+				<label class="form-label" for="password">Mot de passe</label>
 			</div>
 
 			<div class="align-center">
-          		<button mdbBtn type="button" color="primary" mdbWavesEffect >Connection</button>
+          		<button mdbBtn type="button" color="primary" mdbWavesEffect >Connexion</button>
         	</div>
 			<div class="align-right" >
-				<a [routerLink]> Inscription </a>
+				<a [routerLink]="'/signup'" >Inscription</a>
 			</div>
 	</div>
   </div>
