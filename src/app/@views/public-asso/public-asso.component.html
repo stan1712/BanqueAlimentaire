@@ -18,7 +18,24 @@
       </mdb-carousel>
 <!-- le "footer works!" me stresse a colé le cul de ma div-->
 <br>
-<p>[informations utiles sur l'association]</p>
+<h5>Adresse</h5>
+				<p>
+					Z.I Alfred Daney<br/>
+					15 rue Bougainville<br/>
+					33300 Bordeaux Nord
+				</p>
+
+				<h5>Informations complémentaires</h5>
+				<ul>
+					<li>
+						info.label : info.content
+					</li>
+				</ul>
+				
+				<h5>Description</h5>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam culpa saepe, distinctio voluptatum obcaecati cumque nisi dicta autem aliquam recusandae a tempore natus ipsa sequi ut error iusto nam consectetur.
+				</p>
 <br>
     </div>
       <!-- partie Droite-->
@@ -38,9 +55,29 @@
   </div>
 <br>
         <div class="align-center">
-          <button mdbBtn type="button" color="primary" mdbWavesEffect >Primary</button>
+          <button mdbBtn type="button" color="primary" mdbWavesEffect (click)="basicModal.show()" >Contacter</button>
         </div>
     </div>
   </div>
 </div>
 
+<div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+      <!--Mettre le formulaire ici-->
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
+        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
