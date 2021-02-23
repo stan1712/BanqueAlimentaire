@@ -1,21 +1,46 @@
 <h1 class="align-center" style="padding-top: 20px;">[Titre de l'association]</h1>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md">
+      
+      <mdb-carousel [animation]="'slide'">
+        <mdb-carousel-item>
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
+        </mdb-carousel-item>
+        <mdb-carousel-item>
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
+        </mdb-carousel-item>
+      </mdb-carousel>
+<!-- le "footer works!" me stresse a colé le cul de ma div-->
+<br>
+<p>[informations utiles sur l'association]</p>
+<br>
+    </div>
+      <!-- partie Droite-->
+    <div class="col-md" >
+          <p class="align-center">Envoyer une demande</p>
+  <div class="align-center" >
+    <div class="form-check form-check-inline" >
+      <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample" mdbInput>
+      <label class="form-check-label" for="materialInline1">Bénéficiaire</label>
+    </div>
 
 
-<!--<mat-grid-list cols="2" rowHeight="40em">
-    <mat-grid-tile colspan="1" rowspan="1">
-      <p>Coucou</p>
-    </mat-grid-tile>
-  
+    <div class="form-check form-check-inline" >
+     <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample" mdbInput>
+     <label class="form-check-label" for="materialInline2">Bénévole</label>
+    </div>
+  </div>
+<br>
+        <div class="align-center">
+          <button mdbBtn type="button" color="primary" mdbWavesEffect >Primary</button>
+        </div>
+    </div>
+  </div>
+</div>
 
-    <mat-grid-tile colspan="1" rowspan="1">
-        <h2>Envoyer une demande </h2>
-        
-        <mat-radio-group aria-label="Select an option">
-            <mat-radio-button value="1">Option 1</mat-radio-button>
-            <mat-radio-button value="2">Option 2</mat-radio-button>
-            <button mat-flat-button color="warn">Envoyer</button>
-        </mat-radio-group>
-
-    </mat-grid-tile>
-  </mat-grid-list>
--->
