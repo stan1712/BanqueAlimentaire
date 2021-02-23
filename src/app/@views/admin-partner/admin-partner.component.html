@@ -15,7 +15,7 @@
 				
 				<div class="md-form">
 					<input mdbInput type="text" id="assoname" class="form-control">
-					<label for="assoname" class="">Nom de l'association</label>
+					<label for="assoname">Nom de l'association</label>
 				</div>
 
 				<h5>Adresse</h5>
@@ -23,19 +23,19 @@
 					<div class="col-5">
 						<div class="md-form">
 							<input mdbInput type="text" id="street" class="form-control">
-							<label for="street" class="">Rue</label>
+							<label for="street">Rue</label>
 						</div>
 					</div>
 					<div class="col-4">
 						<div class="md-form">
 							<input mdbInput type="text" id="city" class="form-control">
-							<label for="city" class="">Ville</label>
+							<label for="city">Ville</label>
 						</div>
 					</div>
 					<div class="col-3">
 						<div class="md-form">
 							<input mdbInput type="number" id="postalcode" class="form-control">
-							<label for="postalcode" class="">Code postal</label>
+							<label for="postalcode">Code postal</label>
 						</div>
 					</div>
 				</div>
@@ -45,13 +45,13 @@
 					<div class="col-4">
 						<div class="md-form">
 							<input mdbInput type="text" id="type" class="form-control">
-							<label for="type" class="">Type</label>
+							<label for="type">Type</label>
 						</div>
 					</div>
 					<div class="col-5">
 						<div class="md-form">
 							<input mdbInput type="text" id="content" class="form-control">
-							<label for="content" class="">Contenu</label>
+							<label for="content">Contenu</label>
 						</div>
 					</div>
 					<div class="col mt-3 p-0">
@@ -62,7 +62,7 @@
 					<li *ngFor="let info of moreInfos; let i = index">
 						{{info.label}} : {{info.content}}
 						
-						<button mdbBtn (click)="deleteItem(i)" type="button" color="danger" size="sm" mdbWavesEffect>Supprimer</button>
+						<button mdbBtn (click)="deleteItem(i)" type="button" color="danger" size="sm" mdbWavesEffect><i class="fa fa-times" aria-hidden="true"></i></button>
 					</li>
 				</ul>
 
