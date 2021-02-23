@@ -1,33 +1,24 @@
-<!--<div class="container" style="width: 50%; padding-left: 25%; padding-top: 10%;">
-	<mat-form-field appearance="legacy" style="width: 45%;">
-		<mat-label>Email</mat-label>
-		<input matInput type="email">
-	</mat-form-field>
-	<mat-form-field appearance="legacy" style="width: 45%; padding-left: 9%;">
-		<mat-label>Mot de passe</mat-label>
-		<input matInput type="password">
-	</mat-form-field>
-							
-	<button mat-icon-button color="accent">
-		Se connecter
-	</button>
 
-	<br/><br/>
+<div class="row justify-content-center">
+	<div class="col-5">
 
-	<mat-form-field appearance="legacy" style="width: 30%;">
-		<mat-label>Pseudo</mat-label>
-		<input matInput type="email">
-	</mat-form-field>
-	<mat-form-field appearance="legacy" style="width: 30%; padding-left: 5%;">
-		<mat-label>Email</mat-label>
-		<input matInput type="email">
-	</mat-form-field>
-	<mat-form-field appearance="legacy" style="width: 30%; padding-left: 5%;">
-		<mat-label>Mot de passe</mat-label>
-		<input matInput type="password">
-	</mat-form-field>
-							
-	<button mat-icon-button color="accent">
-		S'inscrire
-	</button>
-</div>-->
+			<h1 class="align-center" >connexion</h1>
+
+			<div class="form-outline">
+				<input type="email" id="typeEmail" class="form-control" />
+				<label class="form-label" for="typeEmail">Email input</label>
+			</div>
+
+			<div class="form-outline">
+				<input type="password" id="typePassword" class="form-control" />
+				<label class="form-label" for="typePassword">Password input</label>
+			</div>
+
+			<div class="align-center">
+          		<button mdbBtn type="button" color="primary" mdbWavesEffect >Connection</button>
+        	</div>
+			<div class="align-right" >
+				<a [routerLink]> Inscription </a>
+			</div>
+	</div>
+  </div>
