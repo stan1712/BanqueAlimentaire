@@ -21,7 +21,8 @@ const appRoutes: Routes = [
 	{ path: 'profile', component: ProfileComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'asso/:id', component: PublicAssoComponent },
-	{ path: 'admin', component: AdminPartnerComponent }
+	{ path: 'admin', component: AdminPartnerComponent },
+	{ path: 'dashboard', component: DashboardComponent }
 ];
 
 @NgModule({
