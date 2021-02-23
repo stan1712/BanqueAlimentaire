@@ -15,11 +15,13 @@ import { LoginComponent } from './@views/login/login.component';
 import { PublicAssoComponent } from './@views/public-asso/public-asso.component';
 import { AdminPartnerComponent } from './@views/admin-partner/admin-partner.component';
 import { DashboardComponent } from './@views/dashboard/dashboard.component';
+import { SignupComponent } from './@views/signup/signup.component';
 
 const appRoutes: Routes = [
 	{ path: '', component: HomepageComponent },
 	{ path: 'profile', component: ProfileComponent },
 	{ path: 'login', component: LoginComponent },
+	{ path: 'signup', component: SignupComponent },
 	{ path: 'asso/:id', component: PublicAssoComponent },
 	{ path: 'admin', component: AdminPartnerComponent },
 	{ path: 'dashboard', component: DashboardComponent }
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
 		LoginComponent,
 		PublicAssoComponent,
 		AdminPartnerComponent,
-		DashboardComponent
+		DashboardComponent,
+		SignupComponent
 	],
 	imports: [
 		BrowserModule,
