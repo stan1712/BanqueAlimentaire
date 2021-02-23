@@ -1,130 +1,108 @@
-<!--<div class="grid-container">
-	<mat-grid-list cols="3" rowHeight="40em">
+<div class="row">
 
-		<mat-grid-tile colspan="1" rowspan="1">
-			<mat-card class="dashboard-card">
-				<mat-card-header>
-					<mat-card-title>
-						Ressources Humaines
-					</mat-card-title>
-				</mat-card-header>
-				<mat-card-content class="dashboard-card-content">
-					<mat-tab-group>
-						<mat-tab label="Bénéficiaires">Bénéficiaires</mat-tab>
-						<mat-tab label="Bénévoles">Bénévoles</mat-tab>
-						<mat-tab label="Candidatures">Candidatures</mat-tab>
-					</mat-tab-group>
-				</mat-card-content>
-			</mat-card>
-		</mat-grid-tile>
+	<div class="col-lg-4 pb-2">
+		<div class="card">
+			<div class="card-body">
+				<h3 class="card-title">Ressources Humaines</h3>
+				
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 pb-2">
+		<div class="card">
+			<div class="card-body">
+				<h3 class="card-title">Mon association</h3>
+				
+				<div class="md-form">
+					<input mdbInput type="text" id="assoname" class="form-control">
+					<label for="assoname" class="">Nom de l'association</label>
+				</div>
 
-		<mat-grid-tile colspan="1" rowspan="2">
-			<mat-card class="dashboard-card">
-				<mat-card-header>
-					<mat-card-title>
-						Mon association
-					</mat-card-title>
-				</mat-card-header>
-				<mat-card-content class="leFlex">
-
-					<div>
-						<mat-form-field appearance="legacy" class="width100">
-							<mat-label>Nom de l'association</mat-label>
-							<input matInput>
-						</mat-form-field>
-
-						<h2>Adresse</h2>
-						<mat-form-field appearance="legacy" style="width: 45%;">
-							<mat-label>Rue</mat-label>
-							<input matInput placeholder="55 Avenue de la Libération">
-						</mat-form-field>
-						<mat-form-field appearance="legacy" style="width: 45%; padding-left: 9%;">
-							<mat-label>Ville</mat-label>
-							<input matInput placeholder="Ambarès et Lagrave">
-						</mat-form-field>
-						<mat-form-field appearance="legacy" class="width100">
-							<mat-label>Code Postal</mat-label>
-							<input matInput placeholder="33440" type="number">
-						</mat-form-field>
-
-						<h2>Informations complémentaires</h2>
-						<mat-form-field appearance="legacy" style="width: 35%;">
-							<mat-label>Type</mat-label>
-							<input matInput placeholder="Téléphone, mail, réseaux sociaux">
-						</mat-form-field>
-						<mat-form-field appearance="legacy" style="width: 35%; padding-left: 5%; padding-right: 5%;">
-							<mat-label>Contenu</mat-label>
-							<input matInput placeholder="01 23 45 67 89">
-						</mat-form-field>
-						<button mat-stroked-button color="accent" style="max-width: 20%;">Ajouter</button>
-
-						<ul>
-							<li *ngFor="let info of moreInfos; let i = index">
-								{{info.label}} : {{info.content}}
-							
-								<button mat-icon-button color="accent" (click)="deleteItem(i)">
-									<mat-icon>clear</mat-icon>
-								</button>
-							</li>
-						</ul>
-						
-						<h2>Description</h2>
-						<mat-form-field appearance="legacy" class="width100">
-							<mat-label>Description</mat-label>
-							<textarea matInput rows="6"></textarea>
-						</mat-form-field>
+				<h5>Adresse</h5>
+				<div class="row">
+					<div class="col-5">
+						<div class="md-form">
+							<input mdbInput type="text" id="street" class="form-control">
+							<label for="street" class="">Rue</label>
+						</div>
 					</div>
+					<div class="col-4">
+						<div class="md-form">
+							<input mdbInput type="text" id="city" class="form-control">
+							<label for="city" class="">Ville</label>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="md-form">
+							<input mdbInput type="number" id="postalcode" class="form-control">
+							<label for="postalcode" class="">Code postal</label>
+						</div>
+					</div>
+				</div>
 
-				</mat-card-content>
-			</mat-card>
-		</mat-grid-tile>
+				<h5>Informations complémentaires</h5>
+				<div class="row">
+					<div class="col-4">
+						<div class="md-form">
+							<input mdbInput type="text" id="type" class="form-control">
+							<label for="type" class="">Type</label>
+						</div>
+					</div>
+					<div class="col-5">
+						<div class="md-form">
+							<input mdbInput type="text" id="content" class="form-control">
+							<label for="content" class="">Contenu</label>
+						</div>
+					</div>
+					<div class="col mt-3 p-0">
+						<button type="button" mdbBtn color="primary" outline="true" rounded="true" mdbWavesEffect>Ajouter</button>
+					</div>
+				</div>
+				<ul>
+					<li *ngFor="let info of moreInfos; let i = index">
+						{{info.label}} : {{info.content}}
+						
+						<button mdbBtn (click)="deleteItem(i)" type="button" color="danger" size="sm" mdbWavesEffect>Supprimer</button>
+					</li>
+				</ul>
 
-		<mat-grid-tile colspan="1" rowspan="2">
-			<mat-card class="dashboard-card">
-				<mat-card-header>
-					<mat-card-title>
-						Affichage public
-					</mat-card-title>
-				</mat-card-header>
-				<img mat-card-image src="https://picsum.photos/750/600">
-				<mat-card-content>
-					<h1>Bordeaux Nord</h1>
+				<h5>Description de l'association</h5>
+				<div class="md-form">
+					<textarea type="text" id="description" class="md-textarea form-control" mdbInput></textarea>
+					<label for="description">Description</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 pb-2">
+		<div class="card">
+			<div class="card-body">
+				<h3 class="card-title">Affichage public</h3>
 
-					<h2>Adresse</h2>
-					<p>
-						Z.I Alfred Daney<br/>
-						15 rue Bougainville<br/>
-						33300 Bordeaux Nord
-					</p>
+				<img src="https://picsum.photos/900/400" class="img-fluid pb-2">
 
-					<h2>Informations complémentaires</h2>
-					<ul>
-						<li *ngFor="let info of moreInfos; let i = index">
-							{{info.label}} : {{info.content}}
-						</li>
-					</ul>
-					
-					<h2>Description</h2>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam culpa saepe, distinctio voluptatum obcaecati cumque nisi dicta autem aliquam recusandae a tempore natus ipsa sequi ut error iusto nam consectetur.
-					</p>
-				</mat-card-content>
-			</mat-card>
-		</mat-grid-tile>
+				<h4 class="text-center">Bordeaux Nord</h4>
 
-		<mat-grid-tile colspan="1" rowspan="1">
-			<mat-card class="dashboard-card">
-				<mat-card-header>
-					<mat-card-title>
-						Paramètres de l'association
-					</mat-card-title>
-				</mat-card-header>
-				<mat-card-content>
-					<button mat-raised-button color="warn">Supprimer</button>
-				</mat-card-content>
-			</mat-card>
-		</mat-grid-tile>
+				<h5>Adresse</h5>
+				<p>
+					Z.I Alfred Daney<br/>
+					15 rue Bougainville<br/>
+					33300 Bordeaux Nord
+				</p>
 
-	</mat-grid-list>
+				<h5>Informations complémentaires</h5>
+				<ul>
+					<li *ngFor="let info of moreInfos; let i = index">
+						{{info.label}} : {{info.content}}
+					</li>
+				</ul>
+				
+				<h5>Description</h5>
+				<p>
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam culpa saepe, distinctio voluptatum obcaecati cumque nisi dicta autem aliquam recusandae a tempore natus ipsa sequi ut error iusto nam consectetur.
+				</p>
+			</div>
+		</div>
+	</div>
+
 </div>
--->
