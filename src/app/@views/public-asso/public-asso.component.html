@@ -68,15 +68,49 @@
         <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
           <span aria-hidden="true">×</span>
         </button>
-        <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title w-100" id="myModalLabel">Contact asso [asso]</h4>
       </div>
       <div class="modal-body">
-      <!--Mettre le formulaire ici-->
-        ...
+      <!--Mettre le formulaire ici
+      Bénéficiaire https://www.banquealimentaire.org/trouver-de-laide
+      -->
+      <h1 class="align-center" >Bénéficiaire</h1>
+
+      <div class="md-form">
+  <input type="text" mdbInput id="name" class="form-control" />
+  <label class="form-label" for="name">Nom</label>
+</div>
+      
+      <div class="md-form">
+  <input type="text" mdbInput id="firstname" class="form-control" />
+  <label class="form-label" for="firstname">Prenom</label>
+</div>
+      
+      <div class="md-form">
+  <input type="text" mdbInput id="age" class="form-control" />
+  <label class="form-label" for="age">Age</label>
+</div>
+
+<div class="md-form">
+  <input type="email" mdbInput id="email" class="form-control" />
+  <label class="form-label" for="email">Adresse mail</label>
+</div>
+
+<div class="md-form">
+  <input type="number" mdbInput id="Telephonenumber" class="form-control" />
+  <label class="form-label" for="Telephonenumber">Numero de téléphone</label>
+</div>
+
+<div class="md-form">
+  <input type="text" mdbInput id="job" class="form-control" />
+  <label class="form-label" for="job">Métier ou étudiant </label>
+</div>
+
+
       </div>
       <div class="modal-footer">
-        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
-        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Save changes</button>
+        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Fermer</button>
+        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Envoyer</button>
       </div>
     </div>
   </div>
