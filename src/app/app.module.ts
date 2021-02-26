@@ -19,7 +19,6 @@ import { SignupComponent } from './@views/signup/signup.component';
 
 import { HomeComponent } from './@test/home/home.component';
 import { DashboardComponent } from './@test/dashboard/dashboard.component';
-import { RegisterComponent } from './@test/register/register.component';
 
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,8 +28,8 @@ import { AuthguardGuard } from './authguard.guard';
 const appRoutes: Routes = [
 	{ path: '', component: LoginComponent },
 	{ path: 'login', component: LoginComponent },
+	{ path: 'signup', component: SignupComponent },
 	{ path: 'home', component: HomeComponent },
-	{ path: 'registration', component: RegisterComponent },
 	{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] }
 ];
 
@@ -47,8 +46,7 @@ const appRoutes: Routes = [
 		AdminPartnerComponent,
 		DashboardComponent,
 		SignupComponent,
-		HomeComponent,
-		RegisterComponent
+		HomeComponent
 	],
 	imports: [
 		BrowserModule,

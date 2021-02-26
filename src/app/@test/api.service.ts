@@ -15,7 +15,6 @@ export class ApiService {
 	constructor(private httpClient: HttpClient) { }
 	
 	public userLogin(username, password) {
-		alert(username)
 		return this.httpClient.post <any> (this.baseUrl + '/login.php', {
 				username,
 				password
@@ -32,22 +31,22 @@ export class ApiService {
 	}
 
 
-	public userRegistration(name, email, pwd) {
+	public userRegistration(firstName, lastName, birthdate, email, pwd) {
 		return this.httpClient.post <any> (this.baseUrl + '/register.php', {
-				name,
-				email,
-				pwd
-			})
-			.pipe(map(Users => {
-				console.log(Users)
-				return Users;
-			}));
+			firstName,
+			lastName,
+			birthdate,
+			email,
+			pwd
+		}).pipe(map(Users => {
+			return Users;
+		}));
 	}
 
 	getUser() {
 		return JSON.parse(localStorage.getItem('user'));
 	}
-
+	
 	//token
 	setToken(token: string) {
 		localStorage.setItem('token', token);

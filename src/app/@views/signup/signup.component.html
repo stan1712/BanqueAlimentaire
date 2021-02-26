@@ -3,39 +3,54 @@
 
 			<h1 class="align-center" >Inscription</h1>
 
-            <div class="md-form">
-				<input type="text" mdbInput id="name" class="form-control" />
-				<label class="form-label" for="name">Nom</label>
-			</div>
-            
-            <div class="md-form">
-				<input type="text" mdbInput id="firstname" class="form-control" />
-				<label class="form-label" for="firstname">Prenom</label>
-			</div>
-            
-            <div class="md-form">
-				<input type="date" mdbInput id="birthdate" class="form-control" />
-				<label class="form-label" for="birthdate">Date de naissance</label>
-			</div>
+			<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)">
+				<div class="row">
+					<div class="col-md">
+						<div class="md-form">
+							<input type="text" mdbInput id="lastName" name="lastName" formControlName="lastName" class="form-control" />
+							<label class="form-label" for="lastName">Nom</label>
+						</div>
+					</div>
+					
+					<div class="col-md">
+						<div class="md-form">
+							<input type="text" mdbInput id="firstName" name="firstName" formControlName="firstName" class="form-control" />
+							<label class="form-label" for="firstName">Prenom</label>
+						</div>
+					</div>
+				</div>
+				
+				<div class="md-form">
+					<input type="date" mdbInput id="birthdate" name="birthdate" formControlName="birthdate" class="form-control" />
+					<label class="form-label" for="birthdate">Date de naissance</label>
+				</div>
 
-			<div class="md-form">
-				<input type="email" mdbInput id="email" class="form-control" />
-				<label class="form-label" for="email">Adresse mail</label>
-			</div>
+				<div class="md-form">
+					<input type="email" mdbInput id="email" name="email" formControlName="email" class="form-control" />
+					<label class="form-label" for="email">Adresse mail</label>
+				</div>
 
-			<div class="md-form">
-				<input type="password" mdbInput id="password" class="form-control" />
-				<label class="form-label" for="password">Mot de passe</label>
-			</div>
+				<div class="row">
+					<div class="col-md">
+						<div class="md-form">
+							<input type="password" mdbInput id="password" name="password" formControlName="password" class="form-control" />
+							<label class="form-label" for="password">Mot de passe</label>
+						</div>
+					</div>
+					
+					<div class="col-md">
+						<div class="md-form">
+							<input type="password" mdbInput id="confpassword" name="confpassword" formControlName="confpassword" class="form-control" />
+							<label class="form-label" for="confpassword">Confirmation mot de passe</label>
+						</div>
+					</div>
+				</div>
 
-            <div class="md-form">
-				<input type="password" mdbInput id="confpassword" class="form-control" />
-				<label class="form-label" for="confpassword">Confirmation mot de passe</label>
-			</div>
+				<div class="align-center">
+					<button mdbBtn type="submit" class="btn btn-primary">Inscription</button>
+				</div>
+			</form>
 
-			<div class="align-center">
-          		<button mdbBtn type="button" color="primary" mdbWavesEffect >Inscrption</button>
-        	</div>
 			<div class="align-right" >
 				<a [routerLink]="'/login'">J'ai déjà un compte</a>
 			</div>
