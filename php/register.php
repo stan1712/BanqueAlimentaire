@@ -4,17 +4,19 @@
 	
 	if(isset($postdata) && !empty($postdata)) {
 		$request = json_decode($postdata);
+
 		$name = trim($request->name);
-		$pwd = mysqli_real_escape_string($mysqli, trim($request->pwd));
 		$email = mysqli_real_escape_string($mysqli, trim($request->email));
-		$sql = "INSERT INTO banqalim_users(name,password,email) VALUES ('$name','$pwd','$email')";
+		$pwd = hash('sha256', mysqli_real_escape_string($mysqli, trim($request->pwd)));
+
+		$sql = "INSERT INTO banqalim_users(name, password, email) VALUES ('$name', '$pwd', '$email')";
 
 		if ($mysqli->query($sql) === TRUE) {
 			$authdata = [
 				'name' => $name,
 				'pwd' => '',
 				'email' => $email,
-				'Id' => mysqli_insert_id($mysqli)
+				'id' => mysqli_insert_id($mysqli)
 			];
 
 			echo json_encode($authdata);
