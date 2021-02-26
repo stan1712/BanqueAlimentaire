@@ -1,17 +1,6 @@
-import {
-	Injectable,
-	Output,
-	EventEmitter
-} from '@angular/core';
-import {
-	map
-} from 'rxjs/operators';
-import {
-	HttpClient
-} from '@angular/common/http';
-import {
-	Users
-} from '../../users';
+import { Injectable, Output, EventEmitter } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
 	providedIn: 'root'
@@ -21,6 +10,10 @@ export class ApiService {
 	redirectUrl: string;
 	baseUrl: string = "http://localhost/BanqueAlimentaire/php";
 
+	@Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
+	
+	constructor(private httpClient: HttpClient) { }
+	
 	public userLogin(username, password) {
 		alert(username)
 		return this.httpClient.post <any> (this.baseUrl + '/login.php', {
@@ -33,6 +26,7 @@ export class ApiService {
 				return Users;
 			}));
 	}
+
 
 	public userRegistration(name, email, pwd) {
 		return this.httpClient.post <any> (this.baseUrl + '/register.php', {
