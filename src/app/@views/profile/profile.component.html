@@ -1,94 +1,102 @@
-<p class="text-center">Profil de l'utilisateur</p>
+<h2 class="text-center">Profil de l'utilisateur</h2><br>
 
 <div class="container">
   <div class="row">
     <div class="col-md">
-      <div class="container">
-        <div class="row">
-          <div class="col-md">
-            image ici
+      <div class="card">
+        <div class="card-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md">
+                "image de l'utilisateur"
+              </div>
+              <div class="col-md">
+                <p>"Nom" et "Prénom"</p>
+                <p>Né(e) le "age" , "sexe"</p>
+              </div>
+            </div>
           </div>
-          <div class="col-md">
-            <p class="fs-4">Name and surname</p>
-            <p class="fs-6">age and sex</p>
+          <div class="card">
+            <div class="card-body"> 
+              <p class="card-text">
+                Biographie de la personne
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-body"> 
-          <p class="card-text">
-            Biographie de la personne
-          </p>
-        </div><br>
-      </div>
-      <h2>Je suis rattraché à :</h2><br>
+      </div><br>
+      <h2>Je suis rattaché à :</h2><br>
       <p>Ville du client : Bénévole</p>
       <p>Ville du client : Bénéficiaire</p>
     </div>
     <div class="col-md">
-      <div class="card">
-        <div class="container">
-          <div class="row">
-            <div class="col-md">
-              <div class="form-outline">
-                <input type="text" id="form1" class="form-control" />
-                <label class="form-label" for="form1">Nom</label>
-              </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md">
+            <div class="md-form">
+              <input mdbInput type="text" id="form1" class="form-control">
+              <label for="form1" class="">Nom</label>
             </div>
-            <div class="col-md">
-              <div class="form-outline">
-                <input type="text" id="form1" class="form-control" />
-                <label class="form-label" for="form1">Prenom</label>
-              </div>
+          </div>
+          <div class="col-md">
+            <div class="md-form">
+              <input mdbInput type="text" id="form1" class="form-control">
+              <label for="form1" class="">Prénom</label>
             </div>
           </div>
         </div>
-        <div class="form-outline">
-          <input type="number" id="typeNumber" class="form-control" />
-          <label class="form-label" for="typeNumber">Age</label>
-        </div>
-        <!-- Selection 1 -->
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault1"
-          />
-          <label class="form-check-label" for="flexRadioDefault1"> Men </label>
-        </div>
+      </div>
+      <div class="md-form">
+        <input mdbInput type="text" id="typeNumber" class="form-control">
+        <label for="typeNumber" class="">Date de Naissance</label>
+      </div>
+      <!-- Selection 1 -->
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+        />
+        <label class="form-check-label" for="flexRadioDefault1">Homme</label>
+      </div>
 
-        <!-- Selection 2 -->
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault2"
-            checked
-          />
-          <label class="form-check-label" for="flexRadioDefault2"> Women </label>
-        </div>
-        <!-- Selection 3 -->
-        <div class="form-check">
-          <input
-            class="form-check-input"
-            type="radio"
-            name="flexRadioDefault"
-            id="flexRadioDefault3"
-            checked
-          />
-          <label class="form-check-label" for="flexRadioDefault3"> Strong person </label>
-        </div>
-        <div class="form-outline">
-          <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
-          <label class="form-label" for="textAreaExample">Biographie</label>
-        </div>
-        <div class="form-outline">
-          <input type="url" id="typeURL" class="form-control" />
-          <label class="form-label" for="typeURL">Lien vers l'avatar</label>
-        </div>
+      <!-- Selection 2 -->
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault2">Femme</label>
+      </div>
+      <!-- Selection 3 -->
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault3"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault3">Autre</label>
+      </div>
+      <div class="md-form">
+        <input mdbInput type="text" id="textAreaExample" class="form-control">
+        <label for="textAreaExample" class="">Biographie</label>
+      </div>
+      <div class="md-form">
+        <input mdbInput type="text" id="typeURL" class="form-control">
+        <label for="typeURL" class="">Lien vers l'avatar</label>
       </div>
     </div>
   </div>
 </div>
+<!--
+<div class="md-form">
+  <input mdbInput type="text" id="assoname" class="form-control">
+  <label for="assoname" class="">Nom de l'association</label>
+</div>
+-->
