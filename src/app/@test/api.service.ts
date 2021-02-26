@@ -23,6 +23,10 @@ export class ApiService {
 			.pipe(map(Users => {
 				this.setToken(Users[0].name);
 				this.getLoggedInName.emit(true);
+
+				delete Users[0].password;
+				localStorage.setItem('user', JSON.stringify(Users[0]));
+
 				return Users;
 			}));
 	}
@@ -38,6 +42,10 @@ export class ApiService {
 				console.log(Users)
 				return Users;
 			}));
+	}
+
+	getUser() {
+		return JSON.parse(localStorage.getItem('user'));
 	}
 
 	//token
