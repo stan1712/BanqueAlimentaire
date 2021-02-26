@@ -11,20 +11,28 @@ import { NavbarComponent } from './@components/navbar/navbar.component';
 import { FooterComponent } from './@components/footer/footer.component';
 import { HomepageComponent } from './@views/homepage/homepage.component';
 import { ProfileComponent } from './@views/profile/profile.component';
-import { LoginComponent } from './@views/login/login.component';
+//import { LoginComponent } from './@views/login/login.component';
 import { PublicAssoComponent } from './@views/public-asso/public-asso.component';
 import { AdminPartnerComponent } from './@views/admin-partner/admin-partner.component';
-import { DashboardComponent } from './@views/dashboard/dashboard.component';
+//import { DashboardComponent } from './@views/dashboard/dashboard.component';
 import { SignupComponent } from './@views/signup/signup.component';
 
+import { HomeComponent } from './@test/home/home.component';
+import { LoginComponent } from './@test/login/login.component';
+import { DashboardComponent } from './@test/dashboard/dashboard.component';
+import { RegisterComponent } from './@test/register/register.component';
+
+import {FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AuthguardGuard } from './authguard.guard';
+
 const appRoutes: Routes = [
-	{ path: '', component: HomepageComponent },
-	{ path: 'profile', component: ProfileComponent },
+	{ path: '', component: LoginComponent },
 	{ path: 'login', component: LoginComponent },
-	{ path: 'signup', component: SignupComponent },
-	{ path: 'asso/:id', component: PublicAssoComponent },
-	{ path: 'admin', component: AdminPartnerComponent },
-	{ path: 'dashboard', component: DashboardComponent }
+	{ path: 'home', component: HomeComponent },
+	{ path: 'registration', component: RegisterComponent },
+	{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] }
 ];
 
 @NgModule({
@@ -39,13 +47,19 @@ const appRoutes: Routes = [
 		PublicAssoComponent,
 		AdminPartnerComponent,
 		DashboardComponent,
-		SignupComponent
+		SignupComponent,
+		HomeComponent,
+		RegisterComponent
 	],
 	imports: [
 		BrowserModule,
 		BrowserAnimationsModule,
 		RouterModule.forRoot(appRoutes),
-		MDBBootstrapModule.forRoot()
+		MDBBootstrapModule.forRoot(),
+
+		FormsModule,
+		HttpClientModule,
+		ReactiveFormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
