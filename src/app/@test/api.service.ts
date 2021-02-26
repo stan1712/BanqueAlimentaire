@@ -21,9 +21,7 @@ export class ApiService {
 	redirectUrl: string;
 	baseUrl: string = "http://localhost/BanqueAlimentaire/php";
 
-	@Output() getLoggedInName: EventEmitter <any> = new EventEmitter();
-	constructor(private httpClient: HttpClient) {}
-	public userlogin(username, password) {
+	public userLogin(username, password) {
 		alert(username)
 		return this.httpClient.post <any> (this.baseUrl + '/login.php', {
 				username,
@@ -36,7 +34,7 @@ export class ApiService {
 			}));
 	}
 
-	public userregistration(name, email, pwd) {
+	public userRegistration(name, email, pwd) {
 		return this.httpClient.post <any> (this.baseUrl + '/register.php', {
 				name,
 				email,

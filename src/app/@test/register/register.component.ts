@@ -24,7 +24,7 @@ export class RegisterComponent implements OnInit {
 	ngOnInit() {}
 
 	postdata(angForm1) {
-		this.dataService.userregistration(angForm1.value.name, angForm1.value.email, angForm1.value.password)
+		this.dataService.userRegistration(angForm1.value.name, angForm1.value.email, angForm1.value.password)
 			.pipe(first())
 			.subscribe(
 				data => {

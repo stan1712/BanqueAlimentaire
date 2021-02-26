@@ -20,16 +20,14 @@ export class LoginComponent implements OnInit {
 
 	ngOnInit() {}
 	postdata(angForm1) {
-		this.dataService.userlogin(angForm1.value.email, angForm1.value.password)
-			.pipe(first())
-			.subscribe(
-				data => {
-					const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '/dashboard';
-					this.router.navigate([redirect]);
-				},
-				error => {
-					alert("User name or password is incorrect")
-				});
+		this.dataService.userLogin(angForm1.value.email, angForm1.value.password).pipe(first()).subscribe(
+			data => {
+				const redirect = this.dataService.redirectUrl ? this.dataService.redirectUrl : '/dashboard';
+				this.router.navigate([redirect]);
+			},
+			error => {
+				alert("Mot de passe ou email incorrect !")
+			});
 	}
 	get email() {
 		return this.angForm.get('email');
