@@ -16,20 +16,17 @@ import { PublicAssoComponent } from './@views/public-asso/public-asso.component'
 import { AdminPartnerComponent } from './@views/admin-partner/admin-partner.component';
 // import { DashboardComponent } from './@views/dashboard/dashboard.component';
 import { SignupComponent } from './@views/signup/signup.component';
-
-import { HomeComponent } from './@test/home/home.component';
 import { DashboardComponent } from './@test/dashboard/dashboard.component';
 
-import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AuthguardGuard } from './authguard.guard';
 
 const appRoutes: Routes = [
-	{ path: '', component: HomeComponent },
+	{ path: '', component: HomepageComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'signup', component: SignupComponent },
-	{ path: 'home', component: HomeComponent },
 	{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] },
 	{ path: 'profile', component: ProfileComponent, canActivate: [AuthguardGuard] },
 	{ path: 'admin', component: AdminPartnerComponent, canActivate: [AuthguardGuard] },
@@ -48,8 +45,7 @@ const appRoutes: Routes = [
 		PublicAssoComponent,
 		AdminPartnerComponent,
 		DashboardComponent,
-		SignupComponent,
-		HomeComponent
+		SignupComponent
 	],
 	imports: [
 		BrowserModule,

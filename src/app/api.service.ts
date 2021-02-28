@@ -66,9 +66,9 @@ export class ApiService {
 	}
 	isLoggedIn() {
 		const usertoken = this.getToken();
-		if (usertoken != null) {
-			return true
-		}
+
+		if (usertoken != null) { return true; }
+
 		return false;
 	}
 }

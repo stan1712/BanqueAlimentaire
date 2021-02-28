@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, CanActivate, Router } from '@angular/router';
-import { ApiService } from './@test/api.service';
+import { ApiService } from './api.service';
 @Injectable({
 	providedIn: 'root'
 })
@@ -18,6 +18,7 @@ export class AuthguardGuard implements CanActivate {
 		if (this.dataService.isLoggedIn()) {
 			return true;
 		}
+		console.log(this.dataService.isLoggedIn())
 
 		this.dataService.redirectUrl = routeurl;
 		this.router.navigate(['/login'], {
