@@ -14,17 +14,23 @@ import { ProfileComponent } from './@views/profile/profile.component';
 import { LoginComponent } from './@views/login/login.component';
 import { PublicAssoComponent } from './@views/public-asso/public-asso.component';
 import { AdminPartnerComponent } from './@views/admin-partner/admin-partner.component';
-import { DashboardComponent } from './@views/dashboard/dashboard.component';
+// import { DashboardComponent } from './@views/dashboard/dashboard.component';
 import { SignupComponent } from './@views/signup/signup.component';
+import { DashboardComponent } from './@test/dashboard/dashboard.component';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AuthguardGuard } from './authguard.guard';
 
 const appRoutes: Routes = [
 	{ path: '', component: HomepageComponent },
-	{ path: 'profile', component: ProfileComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'signup', component: SignupComponent },
-	{ path: 'asso/:id', component: PublicAssoComponent },
-	{ path: 'admin', component: AdminPartnerComponent },
-	{ path: 'dashboard', component: DashboardComponent }
+	{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] },
+	{ path: 'profile', component: ProfileComponent, canActivate: [AuthguardGuard] },
+	{ path: 'admin', component: AdminPartnerComponent, canActivate: [AuthguardGuard] },
+	{ path: 'asso/:id', component: PublicAssoComponent, canActivate: [AuthguardGuard] }
 ];
 
 @NgModule({
@@ -45,7 +51,11 @@ const appRoutes: Routes = [
 		BrowserModule,
 		BrowserAnimationsModule,
 		RouterModule.forRoot(appRoutes),
-		MDBBootstrapModule.forRoot()
+		MDBBootstrapModule.forRoot(),
+
+		FormsModule,
+		HttpClientModule,
+		ReactiveFormsModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

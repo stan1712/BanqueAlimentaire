@@ -2,23 +2,25 @@
 <div class="row justify-content-center">
 	<div class="col-5">
 
-			<h1 class="align-center" >Connexion</h1>
+			<h1 class="align-center">Connexion</h1>
 
-			<div class="md-form">
-				<input type="email" mdbInput id="email" class="form-control" />
-				<label class="form-label" for="email">Adresse mail</label>
-			</div>
+			<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)">
+				<div class="md-form">
+					<input type="email" mdbInput id="email" class="form-control" name="email" formControlName="email" />
+					<label class="form-label" for="email">Adresse mail</label>
+				</div>
 
-			<div class="md-form">
-				<input type="password" mdbInput id="password" class="form-control" />
-				<label class="form-label" for="password">Mot de passe</label>
-			</div>
+				<div class="md-form">
+					<input type="password" mdbInput id="password" class="form-control" name="password" formControlName="password" />
+					<label class="form-label" for="password">Mot de passe</label>
+				</div>
 
-			<div class="align-center">
-          		<button mdbBtn type="button" color="primary" mdbWavesEffect >Connexion</button>
-        	</div>
+				<div class="align-center">
+					<button type="submit" mdbBtn class="btn btn-primary">Connexion</button>
+				</div>
+			</form>
 			<div class="align-right" >
-				<a [routerLink]="'/signup'" >Inscription</a>
+				<a [routerLink]="'/signup'">Inscription</a>
 			</div>
 	</div>
   </div>
