@@ -11,23 +11,30 @@ export class ApiService {
 	baseUrl: string = "http://localhost/BanqueAlimentaire/php";
 
 	@Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
-	
+
 	constructor(private httpClient: HttpClient) { }
-	
+
+	public bddRequest(request) {
+		return this.httpClient.post <any> (this.baseUrl + '/request.php', {
+			request
+		}).pipe(map(Data => {
+			return Data;
+		}));
+	}
+
 	public userLogin(username, password) {
 		return this.httpClient.post <any> (this.baseUrl + '/login.php', {
-				username,
-				password
-			})
-			.pipe(map(Users => {
-				this.setToken(Users[0].name);
-				this.getLoggedInName.emit(true);
+			username,
+			password
+		}).pipe(map(Users => {
+			this.setToken(Users[0].name);
+			this.getLoggedInName.emit(true);
 
-				delete Users[0].password;
-				localStorage.setItem('user', JSON.stringify(Users[0]));
+			delete Users[0].password;
+			localStorage.setItem('user', JSON.stringify(Users[0]));
 
-				return Users;
-			}));
+			return Users;
+		}));
 	}
 
 
