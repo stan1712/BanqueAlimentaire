@@ -1,102 +1,83 @@
 <h2 class="text-center">Profil de l'utilisateur</h2><br>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md">
-      <div class="card">
-        <div class="card-body">
-          <div class="container">
-            <div class="row">
-              <div class="col-md">
-                "image de l'utilisateur"
-              </div>
-              <div class="col-md">
-                <p>"Nom" et "Prénom"</p>
-                <p>Né(e) le "age" , "sexe"</p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body"> 
-              <p class="card-text">
-                Biographie de la personne
-              </p>
-            </div>
-          </div>
-        </div>
-      </div><br>
-      <h2>Je suis rattaché à :</h2><br>
-      <p>Ville du client : Bénévole</p>
-      <p>Ville du client : Bénéficiaire</p>
-    </div>
-    <div class="col-md">
-      <div class="container">
-        <div class="row">
-          <div class="col-md">
-            <div class="md-form">
-              <input mdbInput type="text" id="form1" class="form-control">
-              <label for="form1" class="">Nom</label>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="md-form">
-              <input mdbInput type="text" id="form1" class="form-control">
-              <label for="form1" class="">Prénom</label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="md-form">
-        <input mdbInput type="text" id="typeNumber" class="form-control">
-        <label for="typeNumber" class="">Date de Naissance</label>
-      </div>
-      <!-- Selection 1 -->
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault1"
-        />
-        <label class="form-check-label" for="flexRadioDefault1">Homme</label>
-      </div>
+	<div class="row">
+		<div class="col-md">
+			<div class="card">
+				<div class="card-body">
+					<div class="container">
+						<div class="row pb-4">
+							<div class="col-md-auto px-0">
+								<img src="https://pickaface.net/gallery/avatar/xbeatjex5669c1ca59c34.png" class="rounded float-left" width="100vh">
+							</div>
+							<div class="col-md">
+								<p>DOE John</p>
+								<p>Né le 15 octobre 1985, Homme</p>
+							</div>
+						</div>
+					</div>
 
-      <!-- Selection 2 -->
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault2"
-          checked
-        />
-        <label class="form-check-label" for="flexRadioDefault2">Femme</label>
-      </div>
-      <!-- Selection 3 -->
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="flexRadioDefault"
-          id="flexRadioDefault3"
-          checked
-        />
-        <label class="form-check-label" for="flexRadioDefault3">Autre</label>
-      </div>
-      <div class="md-form">
-        <input mdbInput type="text" id="textAreaExample" class="form-control">
-        <label for="textAreaExample" class="">Biographie</label>
-      </div>
-      <div class="md-form">
-        <input mdbInput type="text" id="typeURL" class="form-control">
-        <label for="typeURL" class="">Lien vers l'avatar</label>
-      </div>
-    </div>
-  </div>
+					<h4 class="card-text">
+						Biographie
+					</h4>
+					<blockquote class="blockquote">
+						<small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore eveniet sequi iste ipsum beatae laboriosam accusantium doloremque laudantium? Dolorem tempore iste rerum ad sunt. Fuga deserunt eum magni praesentium accusamus!</small>
+					</blockquote>
+
+				</div>
+			</div>
+		</div>
+		<div class="col-md">
+			<div class="container">
+				<div class="row">
+					<div class="col-md px-0 pr-2">
+						<div class="md-form">
+							<input mdbInput type="text" id="form1" class="form-control">
+							<label for="form1">Nom</label>
+						</div>
+					</div>
+					<div class="col-md px-0 pl-2">
+						<div class="md-form">
+							<input mdbInput type="text" id="form1" class="form-control">
+							<label for="form1">Prénom</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="md-form">
+				<input mdbInput type="date" id="typeNumber" class="form-control">
+				<label for="typeNumber">Date de Naissance</label>
+			</div>
+			<!-- Selection 1 -->
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+				<label class="form-check-label" for="flexRadioDefault1">Homme</label>
+			</div>
+
+			<!-- Selection 2 -->
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+				<label class="form-check-label" for="flexRadioDefault2">Femme</label>
+			</div>
+			<!-- Selection 3 -->
+			<div class="form-check">
+				<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
+				<label class="form-check-label" for="flexRadioDefault3">Autre</label>
+			</div>
+			<div class="md-form">
+				<textarea type="text" id="form8" class="md-textarea form-control" mdbInput></textarea>
+				<label for="textAreaExample">Biographie</label>
+			</div>
+			<div class="md-form">
+				<input mdbInput type="text" id="typeURL" class="form-control">
+				<label for="typeURL">Lien vers l'avatar</label>
+			</div>
+		</div>
+	</div>
 </div>
 <!--
 <div class="md-form">
-  <input mdbInput type="text" id="assoname" class="form-control">
-  <label for="assoname" class="">Nom de l'association</label>
+	<input mdbInput type="text" id="assoname" class="form-control">
+	<label for="assoname">Nom de l'association</label>
 </div>
 -->
