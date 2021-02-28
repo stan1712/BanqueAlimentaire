@@ -26,11 +26,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthguardGuard } from './authguard.guard';
 
 const appRoutes: Routes = [
-	{ path: '', component: LoginComponent },
+	{ path: '', component: HomeComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'signup', component: SignupComponent },
 	{ path: 'home', component: HomeComponent },
-	{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] }
+	{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] },
+	{ path: 'profile', component: ProfileComponent, canActivate: [AuthguardGuard] },
+	{ path: 'admin', component: AdminPartnerComponent, canActivate: [AuthguardGuard] },
+	{ path: 'asso/:id', component: PublicAssoComponent, canActivate: [AuthguardGuard] }
 ];
 
 @NgModule({
