@@ -27,10 +27,10 @@ const appRoutes: Routes = [
 	{ path: '', component: HomepageComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'signup', component: SignupComponent },
-	{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthguardGuard] },
-	{ path: 'profile', component: ProfileComponent, canActivate: [AuthguardGuard] },
-	{ path: 'admin', component: AdminPartnerComponent, canActivate: [AuthguardGuard] },
-	{ path: 'asso/:id', component: PublicAssoComponent, canActivate: [AuthguardGuard] }
+	{ path: 'dashboard', component: DashboardComponent },
+	{ path: 'profile', component: ProfileComponent },
+	{ path: 'admin', component: AdminPartnerComponent },
+	{ path: 'asso/:id', component: PublicAssoComponent }
 ];
 
 @NgModule({

@@ -12,7 +12,9 @@ export class NavbarComponent implements OnInit {
 	constructor(private dataService: ApiService) {
 		dataService.getLoggedInName.subscribe(name => this.isLogin = name);
 
-		this.isLogin = this.dataService.isLoggedIn();
+		//this.isLogin = this.dataService.isLoggedIn();
+
+		this.isLogin = true;
 	}
 	
 	logout() {
