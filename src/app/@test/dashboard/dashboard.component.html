@@ -1,2 +1,17 @@
 <br/><br/>
-<p align="center">Salut {{test.name}}</p>
+<p align="center">Salut {{test.firstName}}</p>
+
+<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)">
+	<div class="md-form">
+		<input type="text" mdbInput id="request" class="form-control" name="request" formControlName="request" />
+		<label class="form-label" for="request">Requête</label>
+	</div>
+
+	<div class="align-center">
+		<button type="submit" mdbBtn class="btn btn-primary">Requêter</button>
+	</div>
+
+	<div>
+		<code>{{ result }}</code>
+	</div>
+</form>
