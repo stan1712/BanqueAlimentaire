@@ -7,7 +7,7 @@
 
 	require("credentials.php");
 
-	$mysqli = new mysqli($_servername, $_username, $_password, 'hostcrus_projects');
+	$mysqli = new mysqli($_servername, $_username, $_password, 'hostcrus_epsi_projects');
 
 	if ($mysqli->connect_error) {
 		die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
