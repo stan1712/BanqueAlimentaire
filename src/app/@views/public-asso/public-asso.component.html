@@ -1,117 +1,117 @@
-<h1 class="align-center" style="padding-top: 20px;">[Titre de l'association]</h1>
+<h1 class="align-center mt-4">[Titre de l'association]</h1>
 <br>
 
 <div class="container">
-  <div class="row">
-    <div class="col-md">
-      
-      <mdb-carousel [animation]="'slide'">
-        <mdb-carousel-item>
-          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
-        </mdb-carousel-item>
-        <mdb-carousel-item>
-          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
-        </mdb-carousel-item>
-      </mdb-carousel>
-<!-- le "footer works!" me stresse a colé le cul de ma div-->
-<br>
-<h5>Adresse</h5>
-				<p>
-					Z.I Alfred Daney<br/>
-					15 rue Bougainville<br/>
-					33300 Bordeaux Nord
-				</p>
+	<div class="row">
+		<div class="col-md">
 
-				<h5>Informations complémentaires</h5>
-				<ul>
-					<li>
-						info.label : info.content
-					</li>
-				</ul>
-				
-				<h5>Description</h5>
-				<p>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam culpa saepe, distinctio voluptatum obcaecati cumque nisi dicta autem aliquam recusandae a tempore natus ipsa sequi ut error iusto nam consectetur.
-				</p>
-<br>
-    </div>
-      <!-- partie Droite-->
-    <div class="col-md" >
-          <p class="align-center">Envoyer une demande</p>
-  <div class="align-center" >
-    <div class="form-check form-check-inline" >
-      <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample" mdbInput>
-      <label class="form-check-label" for="materialInline1">Bénéficiaire</label>
-    </div>
+			<mdb-carousel [animation]="'slide'">
+				<mdb-carousel-item>
+					<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
+				</mdb-carousel-item>
+				<mdb-carousel-item>
+					<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
+				</mdb-carousel-item>
+			</mdb-carousel>
+			<!-- le "footer works!" me stresse a colé le cul de ma div-->
+			<br>
+			<h5>Adresse</h5>
+			<p>
+				Z.I Alfred Daney<br />
+				15 rue Bougainville<br />
+				33300 Bordeaux Nord
+			</p>
+
+			<h5>Informations complémentaires</h5>
+			<ul>
+				<li>
+					info.label : info.content
+				</li>
+			</ul>
+
+			<h5>Description</h5>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam culpa saepe, distinctio voluptatum obcaecati cumque nisi dicta autem aliquam recusandae a tempore natus ipsa sequi ut error iusto nam consectetur.
+			</p>
+			<br>
+		</div>
+		<!-- partie Droite-->
+		<div class="col-md">
+			<p class="align-center">Envoyer une demande</p>
+			<div class="align-center">
+				<div class="form-check form-check-inline">
+					<input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample" mdbInput>
+					<label class="form-check-label" for="materialInline1">Bénéficiaire</label>
+				</div>
 
 
-    <div class="form-check form-check-inline" >
-     <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample" mdbInput>
-     <label class="form-check-label" for="materialInline2">Bénévole</label>
-    </div>
-  </div>
-<br>
-        <div class="align-center">
-          <button mdbBtn type="button" color="primary" mdbWavesEffect (click)="basicModal.show()" >Contacter</button>
-        </div>
-    </div>
-  </div>
+				<div class="form-check form-check-inline">
+					<input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample" mdbInput>
+					<label class="form-check-label" for="materialInline2">Bénévole</label>
+				</div>
+			</div>
+			<br>
+			<div class="align-center">
+				<button mdbBtn type="button" color="primary" mdbWavesEffect (click)="basicModal.show()">Contacter</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
-          <span aria-hidden="true">×</span>
-        </button>
-        <h4 class="modal-title w-100" id="myModalLabel">Contact asso [asso]</h4>
-      </div>
-      <div class="modal-body">
-      <!--Mettre le formulaire ici
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+					<span aria-hidden="true">×</span>
+				</button>
+				<h4 class="modal-title w-100" id="myModalLabel">Contact asso [asso]</h4>
+			</div>
+			<div class="modal-body">
+				<!--Mettre le formulaire ici
       Bénéficiaire https://www.banquealimentaire.org/trouver-de-laide
       -->
-      <h1 class="align-center" >Bénéficiaire</h1>
+				<h1 class="align-center">Bénéficiaire</h1>
 
-      <div class="md-form">
-  <input type="text" mdbInput id="name" class="form-control" />
-  <label class="form-label" for="name">Nom</label>
-</div>
-      
-      <div class="md-form">
-  <input type="text" mdbInput id="firstname" class="form-control" />
-  <label class="form-label" for="firstname">Prenom</label>
-</div>
-      
-      <div class="md-form">
-  <input type="number" mdbInput id="age" class="form-control" />
-  <label class="form-label" for="age">Age</label>
-</div>
+				<div class="md-form">
+					<input type="text" mdbInput id="name" class="form-control" />
+					<label class="form-label" for="name">Nom</label>
+				</div>
 
-<div class="md-form">
-  <input type="email" mdbInput id="email" class="form-control" />
-  <label class="form-label" for="email">Adresse mail</label>
-</div>
+				<div class="md-form">
+					<input type="text" mdbInput id="firstname" class="form-control" />
+					<label class="form-label" for="firstname">Prenom</label>
+				</div>
 
-<div class="md-form">
-  <input type="number" mdbInput id="Telephonenumber" class="form-control" />
-  <label class="form-label" for="Telephonenumber">Numero de téléphone</label>
-</div>
+				<div class="md-form">
+					<input type="number" mdbInput id="age" class="form-control" />
+					<label class="form-label" for="age">Age</label>
+				</div>
 
-<div class="md-form">
-  <input type="text" mdbInput id="job" class="form-control" />
-  <label class="form-label" for="job">Métier ou étudiant </label>
-</div>
+				<div class="md-form">
+					<input type="email" mdbInput id="email" class="form-control" />
+					<label class="form-label" for="email">Adresse mail</label>
+				</div>
+
+				<div class="md-form">
+					<input type="number" mdbInput id="Telephonenumber" class="form-control" />
+					<label class="form-label" for="Telephonenumber">Numero de téléphone</label>
+				</div>
+
+				<div class="md-form">
+					<input type="text" mdbInput id="job" class="form-control" />
+					<label class="form-label" for="job">Métier ou étudiant </label>
+				</div>
 
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Fermer</button>
-        <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Envoyer</button>
-      </div>
-    </div>
-  </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Fermer</button>
+				<button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect>Envoyer</button>
+			</div>
+		</div>
+	</div>
 </div>
