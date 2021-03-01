@@ -3,6 +3,12 @@
 $accent: #FF7800;
 $accent-dark: #F26E20;
 
+.outlined-banqalim-button {
+    background-color: transparent !important;
+    border: 2px solid $accent !important;
+    color: $accent !important;
+}
+
 .orange-background {
 	background-color: $accent-dark;
 }
