@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+$accent: #FF7800;
+$accent-dark: #F26E20;
+
+.orange-background {
+	background-color: $accent-dark;
+}
